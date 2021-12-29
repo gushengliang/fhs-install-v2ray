@@ -27,9 +27,9 @@ JSON_PATH=${JSON_PATH:-/usr/local/etc/v2ray}
 # Set this variable only if you want this script to check all the systemd unit file:
 # export check_all_service_files='yes'
 
-curl() {
-  $(type -P curl) -L -q --retry 5 --retry-delay 10 --retry-max-time 60 "$@"
-}
+# curl() {
+#   $(type -P curl) -L -q --retry 5 --retry-delay 10 --retry-max-time 60 "$@"
+# }
 
 systemd_cat_config() {
   if systemd-analyze --help | grep -qw 'cat-config'; then
